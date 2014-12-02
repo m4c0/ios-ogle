@@ -18,3 +18,4 @@ FOUNDATION_EXPORT const unsigned char OgleVersionString[];
 #import <Ogle/OGLContext.h>
 #import <Ogle/OGLRedundantRemover.h>
 #import <Ogle/OGLShader.h>
+#import <ogle/OGLTexQuadShader.h>

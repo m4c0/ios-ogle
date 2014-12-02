@@ -11,6 +11,8 @@
 		44287A8E1A2E647000E90A7B /* OGLRedundantRemover.m in Sources */ = {isa = PBXBuildFile; fileRef = 44287A8C1A2E647000E90A7B /* OGLRedundantRemover.m */; };
 		44287A911A2E678300E90A7B /* OGLShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 44287A8F1A2E678300E90A7B /* OGLShader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44287A921A2E678300E90A7B /* OGLShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 44287A901A2E678300E90A7B /* OGLShader.m */; };
+		44287A951A2E699700E90A7B /* OGLTexQuadShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 44287A931A2E699700E90A7B /* OGLTexQuadShader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44287A961A2E699700E90A7B /* OGLTexQuadShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 44287A941A2E699700E90A7B /* OGLTexQuadShader.m */; };
 		44D557581A2E512700168958 /* Ogle.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D557571A2E512700168958 /* Ogle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44D557721A2E534000168958 /* OGLContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D557701A2E534000168958 /* OGLContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44D557731A2E534000168958 /* OGLContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D557711A2E534000168958 /* OGLContext.m */; };
@@ -21,6 +23,8 @@
 		44287A8C1A2E647000E90A7B /* OGLRedundantRemover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGLRedundantRemover.m; sourceTree = "<group>"; };
 		44287A8F1A2E678300E90A7B /* OGLShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGLShader.h; sourceTree = "<group>"; };
 		44287A901A2E678300E90A7B /* OGLShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGLShader.m; sourceTree = "<group>"; };
+		44287A931A2E699700E90A7B /* OGLTexQuadShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGLTexQuadShader.h; sourceTree = "<group>"; };
+		44287A941A2E699700E90A7B /* OGLTexQuadShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGLTexQuadShader.m; sourceTree = "<group>"; };
 		44D557521A2E512700168958 /* Ogle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ogle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D557561A2E512700168958 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44D557571A2E512700168958 /* Ogle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ogle.h; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 				44287A8C1A2E647000E90A7B /* OGLRedundantRemover.m */,
 				44287A8F1A2E678300E90A7B /* OGLShader.h */,
 				44287A901A2E678300E90A7B /* OGLShader.m */,
+				44287A931A2E699700E90A7B /* OGLTexQuadShader.h */,
+				44287A941A2E699700E90A7B /* OGLTexQuadShader.m */,
 				44D557571A2E512700168958 /* Ogle.h */,
 				44D557551A2E512700168958 /* Supporting Files */,
 			);
@@ -85,6 +91,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44287A951A2E699700E90A7B /* OGLTexQuadShader.h in Headers */,
 				44D557581A2E512700168958 /* Ogle.h in Headers */,
 				44287A8D1A2E647000E90A7B /* OGLRedundantRemover.h in Headers */,
 				44287A911A2E678300E90A7B /* OGLShader.h in Headers */,
@@ -162,6 +169,7 @@
 			files = (
 				44D557731A2E534000168958 /* OGLContext.m in Sources */,
 				44287A8E1A2E647000E90A7B /* OGLRedundantRemover.m in Sources */,
+				44287A961A2E699700E90A7B /* OGLTexQuadShader.m in Sources */,
 				44287A921A2E678300E90A7B /* OGLShader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
