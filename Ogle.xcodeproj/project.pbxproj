@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		44D557581A2E512700168958 /* Ogle.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D557571A2E512700168958 /* Ogle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44D557721A2E534000168958 /* OGLContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D557701A2E534000168958 /* OGLContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44D557731A2E534000168958 /* OGLContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D557711A2E534000168958 /* OGLContext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		44D557521A2E512700168958 /* Ogle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ogle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D557561A2E512700168958 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44D557571A2E512700168958 /* Ogle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ogle.h; sourceTree = "<group>"; };
+		44D557701A2E534000168958 /* OGLContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGLContext.h; sourceTree = "<group>"; };
+		44D557711A2E534000168958 /* OGLContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGLContext.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,8 @@
 		44D557541A2E512700168958 /* Ogle */ = {
 			isa = PBXGroup;
 			children = (
+				44D557701A2E534000168958 /* OGLContext.h */,
+				44D557711A2E534000168958 /* OGLContext.m */,
 				44D557571A2E512700168958 /* Ogle.h */,
 				44D557551A2E512700168958 /* Supporting Files */,
 			);
@@ -68,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44D557581A2E512700168958 /* Ogle.h in Headers */,
+				44D557721A2E534000168958 /* OGLContext.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +105,7 @@
 		44D557491A2E512700168958 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = OGL;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Eduardo Mauricio da Costa";
 				TargetAttributes = {
@@ -138,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44D557731A2E534000168958 /* OGLContext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,30 +240,60 @@
 		44D557691A2E512800168958 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
 				INFOPLIST_FILE = Ogle/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				WARNING_CFLAGS = "-Wno-error=#warnings";
 			};
 			name = Debug;
 		};
 		44D5576A1A2E512800168958 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
 				INFOPLIST_FILE = Ogle/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				WARNING_CFLAGS = "-Wno-error=#warnings";
 			};
 			name = Release;
 		};
