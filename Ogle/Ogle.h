@@ -17,3 +17,4 @@ FOUNDATION_EXPORT const unsigned char OgleVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <Ogle/PublicHeader.h>
 #import <Ogle/OGLContext.h>
 #import <Ogle/OGLRedundantRemover.h>
+#import <Ogle/OGLShader.h>
