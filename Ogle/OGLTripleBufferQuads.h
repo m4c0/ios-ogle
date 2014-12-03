@@ -12,14 +12,27 @@
 @protocol OGLTripleBufferQuadsDelegate <NSObject>
 - (void)prepareBuffer:(int)i;
 - (void)disposeBuffers;
+
+@optional // Instances
+- (int)mainBufferCount;
+- (void)prepareInstanceBuffer:(int)i;
+
+@optional // Elements
+- (GLenum)elementType; // UBYTE, USHORT, etc
+- (void)prepareElementBuffer:(int)i;
 @end
 
 @interface OGLTripleBufferQuads : NSObject
 - (instancetype)initWithDelegate:(id<OGLTripleBufferQuadsDelegate>)delegate;
 
 - (int)flip;
+
 - (void *)mapBuffer;
 - (void)unmapBuffer;
+
+- (void *)mapInstanceBuffer;
+- (void)unmapInstanceBuffer;
+
 - (int)bindPublicBuffer;
 
 - (void)generateQuadsUsingBlock:(int(^)(void *))block;
