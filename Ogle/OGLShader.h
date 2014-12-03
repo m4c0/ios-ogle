@@ -8,7 +8,9 @@
 
 #import <GLKit/GLKit.h>
 
-@interface OGLShader : NSObject
+#import "OGLContext.h"
+
+@interface OGLShader : NSObject<OGLContextListener>
 @property (nonatomic, readonly) NSString * name;
 
 + (OGLShader *)sharedInstanceNamed:(NSString *)name;

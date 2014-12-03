@@ -13,9 +13,6 @@
 
 @import OpenGLES.ES2.glext;
 
-@interface OGLShader ()<OGLContextListener>
-@end
-
 @implementation OGLTexQuadShader {
     CGRect rect;
     GLuint vao, vbo, ibo;
@@ -25,7 +22,6 @@
     self = [super initWithName:name];
     if (self) {
         rect = CGRectMake(-1, -1, 2, 2);
-        [OGLContext registerListener:self];
     }
     return self;
 }
@@ -33,12 +29,13 @@
     self = [super initWithName:name];
     if (self) {
         rect = r;
-        [OGLContext registerListener:self];
     }
     return self;
 }
 
 - (void)oglContextDidChange {
+    [super oglContextDidChange];
+    
     glGenVertexArraysOES(1, &vao);
     [OGLRedundantRemover bindVertexArray:vao];
     
@@ -66,10 +63,9 @@
     [self enableVertexAttribNamed:@"av2_tex" withSize:2 andType:GL_FLOAT usingStride:16 andOffset:8];
 }
 
-- (void)dealloc {
-    [OGLContext unregisterListener:self];
-}
 - (void)oglContextWillInvalidate {
+    [super oglContextWillInvalidate];
+    
     glDeleteBuffers(1, &vbo);
     glDeleteBuffers(1, &ibo);
     glDeleteVertexArraysOES(1, &vao);

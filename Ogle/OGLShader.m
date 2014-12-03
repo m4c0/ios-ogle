@@ -16,9 +16,6 @@ static __weak OGLShader * IGEShaderCache[1024];
 static int IGEShaderCacheCount = 0;
 static GLint kShaderProgramCurrent = -1;
 
-@interface OGLShader ()<OGLContextListener>
-@end
-
 @implementation OGLShader {
     NSMutableDictionary * attribLocations;
     NSMutableDictionary * uniformLocations;
