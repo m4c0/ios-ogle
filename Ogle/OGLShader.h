@@ -10,6 +10,9 @@
 
 #import "OGLContext.h"
 
+#define OGLShaderEnableAttrib(z, x, n, s) [z enableVertexAttribNamed:@#n withSize:s andType:GL_FLOAT usingStride:sizeof(x) andOffset:offsetof(x, n)]
+#define OGLShaderEnableInstancedAttrib(z, x, n, s) [z enableInstancedVertexAttribNamed:@#n withSize:s andType:GL_FLOAT usingStride:sizeof(x) andOffset:offsetof(x, n)]
+
 @interface OGLShader : NSObject<OGLContextListener>
 @property (nonatomic, readonly) NSString * name;
 
