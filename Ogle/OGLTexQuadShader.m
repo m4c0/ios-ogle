@@ -22,6 +22,8 @@
     self = [super initWithName:name];
     if (self) {
         rect = CGRectMake(-1, -1, 2, 2);
+        
+        if ([self class] == [OGLTexQuadShader class]) [OGLContext registerListener:self];
     }
     return self;
 }
@@ -29,6 +31,8 @@
     self = [super initWithName:name];
     if (self) {
         rect = r;
+        
+        if ([self class] == [OGLTexQuadShader class]) [OGLContext registerListener:self];
     }
     return self;
 }

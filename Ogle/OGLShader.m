@@ -151,7 +151,7 @@ static GLint kShaderProgramCurrent = -1;
     if ((self = [super init])) {
         _name = name;
         
-        [OGLContext registerListener:self];
+        if ([self class] == [OGLShader class]) [OGLContext registerListener:self];
     }
     return self;
 }

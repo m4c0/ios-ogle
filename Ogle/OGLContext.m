@@ -64,10 +64,7 @@ static EAGLContext * OGLCurrentContext = nil;
                                              selector:@selector(oglContextWillInvalidate)
                                                  name:OGLContextWillInvalidate
                                                object:nil];
-    if (OGLCurrentContext) dispatch_async(dispatch_get_main_queue(), ^{
-        // Posterga para permitir que classes pai chamem no init e classes filhas recebam essa notificacao apos seu init
-        [listener oglContextDidChange];
-    });
+    if (OGLCurrentContext) [listener oglContextDidChange];
 }
 
 + (void)unregisterListener:(id<OGLContextListener>)listener {
