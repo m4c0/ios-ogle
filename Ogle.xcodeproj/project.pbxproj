@@ -25,6 +25,8 @@
 		44D557581A2E512700168958 /* Ogle.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D557571A2E512700168958 /* Ogle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44D557721A2E534000168958 /* OGLContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D557701A2E534000168958 /* OGLContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44D557731A2E534000168958 /* OGLContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D557711A2E534000168958 /* OGLContext.m */; };
+		44F167981A2F171200C169C9 /* OGLViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 44F167961A2F171200C169C9 /* OGLViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44F167991A2F171200C169C9 /* OGLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F167971A2F171200C169C9 /* OGLViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		44D557571A2E512700168958 /* Ogle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ogle.h; sourceTree = "<group>"; };
 		44D557701A2E534000168958 /* OGLContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGLContext.h; sourceTree = "<group>"; };
 		44D557711A2E534000168958 /* OGLContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGLContext.m; sourceTree = "<group>"; };
+		44F167961A2F171200C169C9 /* OGLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGLViewController.h; sourceTree = "<group>"; };
+		44F167971A2F171200C169C9 /* OGLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGLViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 				44287AA51A2E92BF00E90A7B /* OGLTripleBufferQuads.m */,
 				44287AA81A2E92D000E90A7B /* OGLTripleBufferTexture.h */,
 				44287AA91A2E92D000E90A7B /* OGLTripleBufferTexture.m */,
+				44F167961A2F171200C169C9 /* OGLViewController.h */,
+				44F167971A2F171200C169C9 /* OGLViewController.m */,
 				44D557571A2E512700168958 /* Ogle.h */,
 				44D557551A2E512700168958 /* Supporting Files */,
 			);
@@ -126,6 +132,7 @@
 				44287A911A2E678300E90A7B /* OGLShader.h in Headers */,
 				44287A991A2E6AD500E90A7B /* OGLOffscreenRenderer.h in Headers */,
 				44287AAA1A2E92D000E90A7B /* OGLTripleBufferTexture.h in Headers */,
+				44F167981A2F171200C169C9 /* OGLViewController.h in Headers */,
 				44D557721A2E534000168958 /* OGLContext.h in Headers */,
 				44287A9F1A2E8E4D00E90A7B /* OGLTextureAtlas.h in Headers */,
 			);
@@ -201,6 +208,7 @@
 			files = (
 				44287AAB1A2E92D000E90A7B /* OGLTripleBufferTexture.m in Sources */,
 				44D557731A2E534000168958 /* OGLContext.m in Sources */,
+				44F167991A2F171200C169C9 /* OGLViewController.m in Sources */,
 				44287A8E1A2E647000E90A7B /* OGLRedundantRemover.m in Sources */,
 				44287A961A2E699700E90A7B /* OGLTexQuadShader.m in Sources */,
 				44287AA71A2E92BF00E90A7B /* OGLTripleBufferQuads.m in Sources */,

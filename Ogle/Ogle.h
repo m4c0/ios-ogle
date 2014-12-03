@@ -24,3 +24,4 @@ FOUNDATION_EXPORT const unsigned char OgleVersionString[];
 #import <Ogle/OGLTextureAtlas.h>
 #import <Ogle/OGLTripleBufferQuads.h>
 #import <Ogle/OGLTripleBufferTexture.h>
+#import <Ogle/OGLViewController.h>
