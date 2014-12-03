@@ -67,8 +67,8 @@
         }
         
         if ([self elements]) {
-            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ivbo[i]);
-            [delegate prepareElementBuffer:ivbo[i]];
+            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, evbo[i]);
+            [delegate prepareElementBuffer:evbo[i]];
         }
     }
 }
