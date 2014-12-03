@@ -20,6 +20,8 @@
 - (CGSize)firstTextureSize;
 
 - (BOOL)containsTextureNamed:(NSString *)name;
+- (float)rotationForTextureNamed:(NSString *)name;
+- (GLKVector4)rotationMatrixForTextureNamed:(NSString *)name;
 - (UIImage *)imageForTextureNamed:(NSString *)name;
 - (CGRect)rectForTextureNamed:(NSString *)name;
 - (GLKVector4)pointCoordsForTextureNamed:(NSString *)name;

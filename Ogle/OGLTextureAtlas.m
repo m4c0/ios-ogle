@@ -168,6 +168,15 @@
     }
 }
 
+- (float)rotationForTextureNamed:(NSString *)name {
+    NSDictionary * img = images[name];
+    return [img[@"rotated"] boolValue] ? M_PI / 2.0 : 0.0;
+}
+- (GLKVector4)rotationMatrixForTextureNamed:(NSString *)name {
+    float angle = [self rotationForTextureNamed:name];
+    return GLKVector4Make(cos(angle), -sin(angle), sin(angle), cos(angle));
+}
+
 - (UIImage *)imageForTextureNamed:(NSString *)name {
     CGRect rect = [self rectForTextureNamed:name];
     UIImage * img = [uiimages firstObject];
