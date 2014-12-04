@@ -107,12 +107,15 @@
 
 - (void)loadSubimageFromDictionary:(NSDictionary *)subimage texture:(GLKTextureInfo *)texture {
     NSString * name = subimage[@"name"];
+    NSString * name2 = [subimage[@"name"] stringByDeletingPathExtension];
     //    CGSize spriteOffset = CGSizeFromString(subimage[@"spriteOffset"]);
     //    CGSize spriteSourceSize = CGSizeFromString(subimage[@"spriteSourceSize"]);
     
+#warning Remover suporte a extensao no nome das imagens
     images[name] = @{@"texture" : texture,
-                     @"rect"    : subimage[@"textureRect"],
+                     @"rect"    : [NSValue valueWithCGRect:CGRectFromString(subimage[@"textureRect"])],
                      @"rotated" : subimage[@"textureRotated"]};
+    images[name2] = images[name];
 }
 
 - (void)bindFirstTexture:(GLenum)activeTexture {
@@ -131,7 +134,7 @@
     NSDictionary * img = images[name];
     NSAssert(img, @"Invalid texture");
     NSAssert(img[@"rect"], @"Invalid texture");
-    return CGRectFromString(img[@"rect"]);
+    return [img[@"rect"] CGRectValue];
 }
 - (GLKVector4)pointCoordsForTextureNamed:(NSString *)name {
     CGSize size = self.firstTextureSize;
