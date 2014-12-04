@@ -184,7 +184,7 @@
     CGRect rect = [self rectForTextureNamed:name];
     UIImage * img = [uiimages firstObject];
     CGImageRef cgi = CGImageCreateWithImageInRect(img.CGImage, rect);
-    img = [UIImage imageWithCGImage:cgi];
+    img = [UIImage imageWithCGImage:cgi scale:1 orientation:[images[name][@"rotated"] boolValue] ? UIImageOrientationLeft : UIImageOrientationUp];
     CGImageRelease(cgi);
     return img;
 }
