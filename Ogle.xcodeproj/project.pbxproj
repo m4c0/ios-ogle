@@ -22,6 +22,10 @@
 		44287AA71A2E92BF00E90A7B /* OGLTripleBufferQuads.m in Sources */ = {isa = PBXBuildFile; fileRef = 44287AA51A2E92BF00E90A7B /* OGLTripleBufferQuads.m */; };
 		44287AAA1A2E92D000E90A7B /* OGLTripleBufferTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = 44287AA81A2E92D000E90A7B /* OGLTripleBufferTexture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44287AAB1A2E92D000E90A7B /* OGLTripleBufferTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 44287AA91A2E92D000E90A7B /* OGLTripleBufferTexture.m */; };
+		445C40761A389BC100915A86 /* OGLBasicQuadRenderer.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 445C40721A389BC100915A86 /* OGLBasicQuadRenderer.fsh */; };
+		445C40771A389BC100915A86 /* OGLBasicQuadRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 445C40731A389BC100915A86 /* OGLBasicQuadRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		445C40781A389BC100915A86 /* OGLBasicQuadRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 445C40741A389BC100915A86 /* OGLBasicQuadRenderer.m */; };
+		445C40791A389BC100915A86 /* OGLBasicQuadRenderer.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 445C40751A389BC100915A86 /* OGLBasicQuadRenderer.vsh */; };
 		44D557581A2E512700168958 /* Ogle.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D557571A2E512700168958 /* Ogle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44D557721A2E534000168958 /* OGLContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D557701A2E534000168958 /* OGLContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44D557731A2E534000168958 /* OGLContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D557711A2E534000168958 /* OGLContext.m */; };
@@ -45,6 +49,10 @@
 		44287AA51A2E92BF00E90A7B /* OGLTripleBufferQuads.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGLTripleBufferQuads.m; sourceTree = "<group>"; };
 		44287AA81A2E92D000E90A7B /* OGLTripleBufferTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGLTripleBufferTexture.h; sourceTree = "<group>"; };
 		44287AA91A2E92D000E90A7B /* OGLTripleBufferTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGLTripleBufferTexture.m; sourceTree = "<group>"; };
+		445C40721A389BC100915A86 /* OGLBasicQuadRenderer.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = OGLBasicQuadRenderer.fsh; sourceTree = "<group>"; };
+		445C40731A389BC100915A86 /* OGLBasicQuadRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGLBasicQuadRenderer.h; sourceTree = "<group>"; };
+		445C40741A389BC100915A86 /* OGLBasicQuadRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGLBasicQuadRenderer.m; sourceTree = "<group>"; };
+		445C40751A389BC100915A86 /* OGLBasicQuadRenderer.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = OGLBasicQuadRenderer.vsh; sourceTree = "<group>"; };
 		44D557521A2E512700168958 /* Ogle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ogle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D557561A2E512700168958 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44D557571A2E512700168958 /* Ogle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ogle.h; sourceTree = "<group>"; };
@@ -84,6 +92,10 @@
 		44D557541A2E512700168958 /* Ogle */ = {
 			isa = PBXGroup;
 			children = (
+				445C40721A389BC100915A86 /* OGLBasicQuadRenderer.fsh */,
+				445C40731A389BC100915A86 /* OGLBasicQuadRenderer.h */,
+				445C40741A389BC100915A86 /* OGLBasicQuadRenderer.m */,
+				445C40751A389BC100915A86 /* OGLBasicQuadRenderer.vsh */,
 				44D557701A2E534000168958 /* OGLContext.h */,
 				44D557711A2E534000168958 /* OGLContext.m */,
 				44287A971A2E6AD500E90A7B /* OGLOffscreenRenderer.h */,
@@ -134,6 +146,7 @@
 				44287AAA1A2E92D000E90A7B /* OGLTripleBufferTexture.h in Headers */,
 				44F167981A2F171200C169C9 /* OGLViewController.h in Headers */,
 				44D557721A2E534000168958 /* OGLContext.h in Headers */,
+				445C40771A389BC100915A86 /* OGLBasicQuadRenderer.h in Headers */,
 				44287A9F1A2E8E4D00E90A7B /* OGLTextureAtlas.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,6 +209,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				445C40761A389BC100915A86 /* OGLBasicQuadRenderer.fsh in Resources */,
+				445C40791A389BC100915A86 /* OGLBasicQuadRenderer.vsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +230,7 @@
 				44287A921A2E678300E90A7B /* OGLShader.m in Sources */,
 				44287AA01A2E8E4D00E90A7B /* OGLTextureAtlas.m in Sources */,
 				44287A9A1A2E6AD500E90A7B /* OGLOffscreenRenderer.m in Sources */,
+				445C40781A389BC100915A86 /* OGLBasicQuadRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
