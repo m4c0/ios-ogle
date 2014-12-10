@@ -13,8 +13,8 @@ typedef struct OGLBasicQuadRendererBlock {
     GLKVector4 av4_pos;
     GLKVector4 av4_tex;
     GLKVector4 av4_rot;
+    GLKVector2 av2_scale;
     GLfloat af_dim;
-    GLfloat af_scale;
 } OGLBasicQuadRendererBlock;
 
 @interface OGLBasicQuadRenderer : NSObject

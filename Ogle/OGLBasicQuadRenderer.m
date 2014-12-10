@@ -55,8 +55,8 @@
     OGLShaderEnableInstancedAttrib(shader, OGLBasicQuadRendererBlock, av4_pos, 4);
     OGLShaderEnableInstancedAttrib(shader, OGLBasicQuadRendererBlock, av4_tex, 4);
     OGLShaderEnableInstancedAttrib(shader, OGLBasicQuadRendererBlock, av4_rot, 4);
+    OGLShaderEnableInstancedAttrib(shader, OGLBasicQuadRendererBlock, av2_scale, 2);
     OGLShaderEnableInstancedAttrib(shader, OGLBasicQuadRendererBlock, af_dim, 1);
-    OGLShaderEnableInstancedAttrib(shader, OGLBasicQuadRendererBlock, af_scale, 1);
 }
 
 - (void)prepareElementBuffer:(int)i {
