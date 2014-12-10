@@ -13,6 +13,7 @@ typedef struct OGLBasicQuadRendererBlock {
     GLKVector4 av4_pos;
     GLKVector4 av4_tex;
     GLKVector4 av4_rot;
+    GLKVector4 av4_pickerColor;
     GLKVector2 av2_scale;
     GLfloat af_dim;
 } OGLBasicQuadRendererBlock;
@@ -24,4 +25,5 @@ typedef struct OGLBasicQuadRendererBlock {
 - (void)finishBlocks;
 - (void)fixPublicBuffer;
 - (void)render;
+- (void)renderForPicking;
 @end

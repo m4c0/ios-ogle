@@ -55,6 +55,7 @@
     OGLShaderEnableInstancedAttrib(shader, OGLBasicQuadRendererBlock, av4_pos, 4);
     OGLShaderEnableInstancedAttrib(shader, OGLBasicQuadRendererBlock, av4_tex, 4);
     OGLShaderEnableInstancedAttrib(shader, OGLBasicQuadRendererBlock, av4_rot, 4);
+    OGLShaderEnableInstancedAttrib(shader, OGLBasicQuadRendererBlock, av4_pickerColor, 4);
     OGLShaderEnableInstancedAttrib(shader, OGLBasicQuadRendererBlock, av2_scale, 2);
     OGLShaderEnableInstancedAttrib(shader, OGLBasicQuadRendererBlock, af_dim, 1);
 }
@@ -101,6 +102,12 @@
     [shader setUniform4f:self.sceneScale forKey:@"uv4_scale"];
     [shader use];
     [blocks drawArray:GL_TRIANGLES];
+}
+
+- (void)renderForPicking {
+    [shader setUniform1f:1 forKey:@"uf_picking"];
+    [self render];
+    [shader setUniform1f:0 forKey:@"uf_picking"];
 }
 
 @end
